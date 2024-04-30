@@ -1,25 +1,28 @@
 import React from 'react';
 import styles from './PositionIcon.module.css';
 
-function PositionIcon({ position }) {
-  const getPositionColor = () => {
+function PositionIcon({ position, playerName }) {
+  const getPositionTextColor = () => {
     switch (position) {
       case 'QB':
-        return styles.qbColor;
+        return styles.qbTextColor;
       case 'RB':
-        return styles.rbColor;
+        return styles.rbTextColor;
       case 'WR':
-        return styles.wrColor;
+        return styles.wrTextColor;
       case 'TE':
-        return styles.teColor;
+        return styles.teTextColor;
       default:
         return '';
     }
   };
 
   return (
-    <div className={`${styles.positionIcon} ${getPositionColor()}`}>
-      {position}
+    <div className={styles.playerInfo}>
+      <div className={`${styles.positionIcon} ${getPositionTextColor()}`}>
+        {position}
+      </div>
+      <span className={styles.playerName}>{playerName}</span>
     </div>
   );
 }

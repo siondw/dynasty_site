@@ -1,0 +1,15 @@
+.rosterContainer {
+    width: 1200px;
+    height: 560px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .positionColumn {
+    flex: 1;
+    padding: 16px;
+  }
+  
+  .playerItem {
+    margin-bottom: 16px;
+  }
