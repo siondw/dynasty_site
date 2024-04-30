@@ -1,0 +1,67 @@
+.teamHeader {
+    display: flex;
+    align-items: center;
+    background: var(--header-gradient, linear-gradient(90deg, rgba(37, 99, 235, 0.50) 0%, rgba(35, 78, 110, 0.50) 100%));
+    padding: 48px;
+    border-radius: 8px;
+    height: 291px;
+    width: 100%;  /* Make the width responsive */
+    margin: auto;  /* Center the header if the screen is wider than 1920px */
+}
+
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;  /* Add padding instead of large margins */
+    flex-direction: row;
+    max-width: 1200px;  /* Set a sensible maximum width */
+    margin: 0 auto;  /* Center the container on the page */
+}
+
+@media (max-width: 888px) {
+    .teamHeader {
+        padding: 20px;  /* Reduce padding on smaller screens */
+        height: auto;  /* Adjust height for smaller screens */
+    }
+
+    .mainContainer {
+        flex-direction: column;  /* Stack children vertically on small screens */
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+
+
+.teamName {
+    color: var(--BG-White, #EEE);
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teamInfoContainer {
+    flex-direction: column;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-left: 24px;
+}
+
+.teamInfo {
+    color: var(--BG-White, #EEE);
+    width: fit-content;
+    height: 20px;
+    font-weight: 700;
+    
+}
+
+.teamInfoWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}
+

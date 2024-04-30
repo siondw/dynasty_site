@@ -1,0 +1,58 @@
+:root {
+    /* Color palette */
+    --shark: #24252A;
+    --touch-of-blue: #2563EB; 
+    --te-purple: #51236E;
+    --qb-green: #326E23;
+    --wr-blue: #234E6E;
+    --rb-red: #6E2323;
+
+    /* Header Gradient */
+    --header-gradient: linear-gradient(90deg, rgba(37, 99, 235, 0.50) 0%, rgba(35, 78, 110, 0.50) 100%);
+
+    /* Font styles */
+    --main-header: 'Roboto', Arial, sans-serif;
+    --subheader-2: 'Roboto', Arial, sans-serif;
+    --subheader-3: 'Roboto', Arial, sans-serif;
+    --subtitle: 'Roboto', Arial, sans-serif;
+    --secondary-font: 'Georgia', serif;
+}
+
+/* Header */
+h1 {
+    font-family: var(--main-header);
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%; 
+}
+
+/* Subheader 2 */
+h2 {
+    font-family: var(--subheader-2);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Subheader 3 */
+h3 {
+    font-family: var(--subheader-3);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 28.8px */
+    color: var(--shark, #24252A);
+}
+
+/* Subtitle */
+h4 {
+    font-family: var(--subtitle);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+}

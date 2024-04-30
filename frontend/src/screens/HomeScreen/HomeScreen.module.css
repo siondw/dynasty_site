@@ -1,0 +1,33 @@
+.home-screen {
+    text-align: center;
+    color: white;
+    background-color: var(--shark, #24252a);
+    display: flex;
+    width: auto;
+    height: 100vh;
+}
+
+.home-header {
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.view-teams-button {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-teams-button:hover {
+    background-color: #51236E;
+}
+
