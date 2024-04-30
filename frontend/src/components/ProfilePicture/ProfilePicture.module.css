@@ -13,9 +13,8 @@
     height: 200px;
 }
 
-.active {
-    border: 5px solid #4CAF50 !important; /* Ensure this style takes precedence */
-    transform: scale(1.1) !important; /* Ensure this transform is applied */
-    border-radius: 50% !important; /* Maintain the border-radius */
+.profilePicture img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
 }
 

@@ -1,0 +1,12 @@
+.tabGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tabContainer {
+    display: flex;
+  }
+  
+  .tabContent {
+    margin-top: 20px;
+  }

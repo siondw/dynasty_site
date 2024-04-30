@@ -2,6 +2,7 @@ import React from 'react';
 import TeamHeader from './components/TeamHeader/TeamHeader';
 import './styles.css';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
+import TabGroup from './components/TabGroup/TabGroup';
 
 const mockTeamData = {
     id: '4',
@@ -15,7 +16,7 @@ const mockTeamData = {
 function App() {
     return (
         <div className="App">
-            <HomeScreen />
+            <TabGroup />
         </div>
     );
 }

@@ -70,5 +70,5 @@
 
   .home-header.dim {
     opacity: 0.5; /* Dim the text */
-    transition: opacity 0.3s ease;
+    transition: opacity 0.8s ease;
 }
