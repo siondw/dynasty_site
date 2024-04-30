@@ -1,33 +1,74 @@
 .home-screen {
+    position: relative;
     text-align: center;
-    color: white;
-    background-color: var(--shark, #24252a);
-    display: flex;
-    width: auto;
-    height: 100vh;
-}
-
-.home-header {
-    margin-bottom: 20px;
-}
-
-.profile-section {
+    color: var(--bg-white, #EEEEEE);
+    background-color: var(--shark);
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+    background-image: url('../../assets/topographic.svg');
+    overflow: hidden;
+}
+
+  .content-wrapper {
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .home-header {
+    margin-bottom: 20px;
+  }
+  
+  .lifetime {
+    color: var(--touch-of-blue);
+    font-size: 120px;
+  }
+  
+  .profile-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-}
-
-.view-teams-button {
-    background-color: #2563EB;
-    color: white;
+  }
+  
+  .view-teams-button {
+    display: inline-block;
+    font-family: var(--subtitle);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--touch-of-blue);
+    text-decoration: none;
+    background-color: transparent;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0;
     cursor: pointer;
-}
+    transition: color 0.3s;
+  }
+  
+  .view-teams-button::after {
+    content: ' →';
+  }
+  
+  .view-teams-button:hover {
+    color: var(--wr-blue);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .profile-section {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .profile-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-.view-teams-button:hover {
-    background-color: #51236E;
+  .home-header.dim {
+    opacity: 0.5; /* Dim the text */
+    transition: opacity 0.3s ease;
 }
-
