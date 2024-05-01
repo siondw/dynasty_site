@@ -8,7 +8,7 @@
     --rb-red: #6E2323;
 
     /* Header Gradient */
-    --header-gradient: linear-gradient(90deg, rgba(37, 99, 235, 0.50) 0%, rgba(35, 78, 110, 0.50) 100%);
+    --header-gradient: linear-gradient(90deg, rgba(37, 99, 235, 1) 0%, rgba(35, 78, 110, 1) 100%);
 
     /* Font styles */
     --main-header: 'Roboto', Arial, sans-serif;
@@ -59,9 +59,18 @@ h4 {
 
 h5 {
     font-family: var(--subheader-2);
-    font-size: 32px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 25.6px */
     margin: 0;
+}
+
+h6 {
+    font-family: var(--subheader-2);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 28.8px */
+    text-transform: uppercase;
 }

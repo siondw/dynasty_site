@@ -1,0 +1,8 @@
+.draftBoard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px 16px;
+    justify-items: center;
+    align-items: center;
+  }

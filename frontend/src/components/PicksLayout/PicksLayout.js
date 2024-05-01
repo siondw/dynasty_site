@@ -42,6 +42,9 @@ function useCache(url, params) {
             return acc;
           }, []);
 
+          // Sort the grouped picks array by year
+          groupedPicks.sort((a, b) => a.year - b.year);
+
           cache[cacheKey] = groupedPicks;
           setData(groupedPicks);
           setIsLoading(false);
@@ -58,14 +61,15 @@ function useCache(url, params) {
 }
 
 function PicksLayout({ teamId }) {
-  const { data: picksData, isLoading, error } = useCache(`http://localhost:5000/api/teams/${teamId}/draft_picks`, {});
+  const apiUrl = process.env.REACT_APP_API_URL; // Accessing the environment variable
+  const { data: picksData, isLoading, error } = useCache(`${apiUrl}/api/teams/${teamId}/draft_picks`, {});
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching draft picks.</div>;
 
   return (
     <div className={styles.layout}>
-      {picksData.map((data, index) => (
+      {picksData && picksData.map((data, index) => (
         <div key={data.year} style={{ marginTop: `${index * 64}px` }}>
           <PicksContainer year={data.year} picks={data.picks} />
         </div>

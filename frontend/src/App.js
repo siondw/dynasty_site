@@ -4,6 +4,7 @@ import "./styles.css";
 
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import TeamProfileScreen from "./screens/TeamProfileScreen/TeamProfileScreen";
+import LeagueViewScreen from "./screens/LeagueViewScreen/LeagueViewScreen";
 
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/team/:teamId" element={<TeamProfileScreen />} />
+          <Route path="/league-view" element={<LeagueViewScreen />} /> 
         </Routes>
       </div>
     </Router>
   );
 }
-
 export default App;

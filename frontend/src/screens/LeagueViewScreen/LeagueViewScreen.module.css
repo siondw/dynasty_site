@@ -1,0 +1,35 @@
+.leagueViewScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: var(--Shark, #24252A);
+    width: auto;
+    height: 100vh;
+    background-image: url('../../assets/topographic.svg');
+    overflow: hidden;
+}
+
+.title {
+    color: var(--BG-White, #EEE);
+    letter-spacing: 3px;
+}
+
+.profileTitle {
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 40px;
+    color: #EEE;
+    
+  }
+
+.profileSection {
+    margin-top: 40px;
+  }
+  
+  .profileRow {
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+    margin-bottom: 24px;
+  }

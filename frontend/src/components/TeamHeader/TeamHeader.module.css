@@ -1,67 +1,104 @@
 .teamHeader {
+    position: relative;
     display: flex;
     align-items: center;
     background: var(--header-gradient, linear-gradient(90deg, rgba(37, 99, 235, 0.50) 0%, rgba(35, 78, 110, 0.50) 100%));
     padding: 48px;
     border-radius: 8px;
     height: 200px;
-    width: 100%;  /* Make the width responsive */
-   
-}
-
-.mainContainer {
+    width: 100%;
+  }
+  
+  .buttonContainer {
+    position: absolute;
+    top: 10px;
+    left: 400px;
+  }
+  
+  .viewLeagueButton {
+    display: inline-block;
+    font-family: var(--subtitle);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: #eee;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+    padding-left: 20px; /* Add padding to make space for the arrow */
+  }
+  
+  .viewLeagueButton:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 8px solid #eee; /* Adjust the arrow color as needed */
+    transition: border-color 0.3s;
+  }
+  
+  .viewLeagueButton:hover:before {
+    border-right-color: #ccc; /* Adjust the arrow color on hover as needed */
+  }
+  
+  .mainContainer {
     display: flex;
     align-items: center;
-    padding: 0 20px;  /* Add padding instead of large margins */
+    padding: 0 20px;
     flex-direction: row;
-    max-width: 1200px;  /* Set a sensible maximum width */
-    margin: 0 auto;  /* Center the container horizontally */
-    margin-left: 72px;
-}
-
-@media (max-width: 888px) {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  @media (max-width: 888px) {
     .teamHeader {
-        padding: 20px;   /* Reduce padding on smaller screens */
-        height: auto;    /* Adjust height for smaller screens */
+      padding: 20px;
+      height: auto;
     }
-
+  
     .mainContainer {
-        flex-direction: column;  /* Stack children vertically on small screens */
-        padding: 10px;
-        justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      justify-content: center;
     }
-}
-
-
-
-.teamName {
+  }
+  
+  .teamName {
     color: var(--BG-White, #EEE);
     width: fit-content;
     height: fit-content;
     margin: 0;
     flex-direction: column;
     justify-content: center;
-}
-
-.teamInfoContainer {
+  }
+  
+  .teamInfoContainer {
     flex-direction: column;
     display: inline-flex;
     align-items: flex-start;
     gap: 24px;
     margin-left: 24px;
-}
-
-.teamInfo {
+  }
+  
+  .teamInfo {
     color: var(--BG-White, #EEE);
     width: fit-content;
     height: 20px;
     font-weight: 700;
-    
-}
-
-.teamInfoWrapper {
+  }
+  
+  .teamInfoWrapper {
     display: flex;
     flex-direction: row;
     gap: 64px;
-}
-
+  }

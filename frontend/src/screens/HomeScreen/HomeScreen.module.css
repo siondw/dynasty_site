@@ -48,13 +48,34 @@
     transition: color 0.3s;
   }
   
-  .view-teams-button::after {
-    content: ' →';
-  }
-  
+
+
   .view-teams-button:hover {
     color: var(--wr-blue);
   }
+
+  .view-league-button {
+    display: inline-block;
+    font-family: var(--subtitle);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--touch-of-blue);
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 48px;
+  }
+
+  .view-teams-button:hover {
+    color: var(--wr-blue);
+  }
+  
+  
   
   @media screen and (max-width: 768px) {
     .profile-section {
@@ -71,4 +92,9 @@
   .home-header.dim {
     opacity: 0.5; /* Dim the text */
     transition: opacity 0.8s ease;
+}
+
+.profile-section.enlarge {
+  transform: scale(1.2); /* Slightly enlarge */
+  transition: transform 0.3s ease;
 }

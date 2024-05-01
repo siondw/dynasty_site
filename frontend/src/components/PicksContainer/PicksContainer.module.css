@@ -10,11 +10,13 @@
 
 .yearTitle {
     position: absolute;
-    top: -24px; /* Position half outside the container */
+    top: -40px; /* Position half outside the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust horizontal positioning to be perfectly centered */
     padding: 0 10px;
-    color: var(--Shark, #24252A);
+    color: var(--wr-blue, #234E6E); /* Adjust color as needed */
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.10);
+    
 }
 
 .pickList {

@@ -35,7 +35,9 @@ function useCache(url, params) {
 }
 
 function RosterContainer({ teamId }) {
-  const { data: roster, isLoading, error } = useCache(`http://localhost:5000/api/teams/${teamId}/players`, {});
+
+  const apiUrl = process.env.REACT_APP_API_URL; // Accessing the environment variable
+  const { data: roster, isLoading, error } = useCache(`${apiUrl}/api/teams/${teamId}/players`, {});
 
   const renderPlayersByPosition = (position) => {
     return roster
