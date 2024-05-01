@@ -4,11 +4,10 @@
     background: var(--header-gradient, linear-gradient(90deg, rgba(37, 99, 235, 0.50) 0%, rgba(35, 78, 110, 0.50) 100%));
     padding: 48px;
     border-radius: 8px;
-    height: 291px;
+    height: 200px;
     width: 100%;  /* Make the width responsive */
-    margin: auto;  /* Center the header if the screen is wider than 1920px */
+   
 }
-
 
 .mainContainer {
     display: flex;
@@ -16,13 +15,14 @@
     padding: 0 20px;  /* Add padding instead of large margins */
     flex-direction: row;
     max-width: 1200px;  /* Set a sensible maximum width */
-    margin: 0 auto;  /* Center the container on the page */
+    margin: 0 auto;  /* Center the container horizontally */
+    margin-left: 72px;
 }
 
 @media (max-width: 888px) {
     .teamHeader {
-        padding: 20px;  /* Reduce padding on smaller screens */
-        height: auto;  /* Adjust height for smaller screens */
+        padding: 20px;   /* Reduce padding on smaller screens */
+        height: auto;    /* Adjust height for smaller screens */
     }
 
     .mainContainer {

@@ -1,0 +1,7 @@
+.layout {
+    display: flex;
+    justify-content: flex-start;  /* Align containers from the left */
+    align-items: flex-start;  /* Align containers to the top and use margin for stepping */
+    margin-top: 24px;
+    gap: 16px;
+}

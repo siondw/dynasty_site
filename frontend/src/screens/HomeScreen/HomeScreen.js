@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './HomeScreen.module.css';
 import ProfilePicture from '../../components/ProfilePicture/ProfilePicture';
 
 function HomeScreen() {
   const [isActive, setIsActive] = useState(false);
+  const navigate = useNavigate();  // Hook for navigation
   const teamIDs = Array.from({ length: 10 }, (_, i) => i + 1);
 
   const toggleEffects = () => {
     setIsActive(!isActive);
+  };
+
+  const handleProfileClick = (teamId) => {
+    navigate(`/team/${teamId}`);  // Navigates to the team profile screen
   };
 
   return (
@@ -25,7 +31,7 @@ function HomeScreen() {
         </header>
         <div className={`${styles['profile-section']} ${isActive ? styles.glow : ''}`}>
           {teamIDs.map(teamId => (
-            <ProfilePicture key={teamId} teamId={teamId} altText={`Player ${teamId}`} />
+            <ProfilePicture key={teamId} teamId={teamId} altText={`Player ${teamId}`} onClick={() => handleProfileClick(teamId)} />
           ))}
         </div>
       </div>

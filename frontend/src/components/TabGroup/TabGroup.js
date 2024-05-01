@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import styles from './TabGroup.module.css';
 import Tab from '../Tab/Tab';
 import RosterContainer from '../RosterContainer/RosterContainer';
+import PicksLayout from '../PicksLayout/PicksLayout';
 
-function TabGroup({ rosterData }) {
+function TabGroup({ teamId }) {
   const [selectedTab, setSelectedTab] = useState('tab1');
 
   const handleTabClick = (tabName) => {
@@ -13,11 +14,11 @@ function TabGroup({ rosterData }) {
   const renderTabContent = () => {
     switch (selectedTab) {
       case 'tab1':
-        return <RosterContainer roster={rosterData} />;
+        return <RosterContainer teamId={teamId} />;
       case 'tab2':
-        return <div>Content for Tab 2</div>;
+        return <div> <PicksLayout teamId={teamId} /></div>;
       case 'tab3':
-        return <div>Content for Tab 3</div>;
+        return <div>Coming Soon</div>;
       default:
         return null;
     }

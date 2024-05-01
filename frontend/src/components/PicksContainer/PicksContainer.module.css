@@ -1,0 +1,33 @@
+.container {
+    width: 392px;
+    height: 344px;
+    background-color: var(--BG-White, #EEE); /* Adjust color as needed */
+    border-radius: 8px; /* Optional, for rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    position: relative; /* For positioning the year title */
+}
+
+.yearTitle {
+    position: absolute;
+    top: -24px; /* Position half outside the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal positioning to be perfectly centered */
+    padding: 0 10px;
+    color: var(--Shark, #24252A);
+}
+
+.pickList {
+    list-style-type: disc; /* Ensures the list is bulleted */
+    padding: 40px 20px 20px; /* Adjust padding to fit the layout */
+    margin: 0;
+    font-size: 20px; /* Typical font size for h4, adjust as needed */
+    color: var(--Shark, #24252A);
+    
+}
+
+.pickList li {
+    padding-bottom: 8px; /* Space between items */
+    font-weight: bold; /* Bold text for h4-like emphasis */
+}
+

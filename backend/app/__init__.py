@@ -1,7 +1,7 @@
-# app/__init__.py
 from flask import Flask
 import os
 from .database import db
+from flask_cors import CORS  # Import CORS
 
 def create_app():
     app = Flask(__name__)
@@ -10,7 +10,10 @@ def create_app():
 
     db.init_app(app)
 
-    # Import and register blueprints here to avoid circular imports
+    # Enable CORS
+    CORS(app, resources={r"/api/*": {"origins": "*"}})  # You can specify more restrictive settings
+
+    # Import and register blueprints
     from .routes.team_routes import teams_bp
     from .routes.player_routes import players_bp
     from .routes.pick_routes import drafts_bp

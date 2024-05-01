@@ -1,0 +1,10 @@
+.team-profile-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--BG-White, #EEE);
+  width: 100%; /* Full width of the container */
+  min-height: 100vh; /* Minimum height to cover the viewport */
+}
+
+  
